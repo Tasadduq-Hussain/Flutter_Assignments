@@ -1,66 +1,132 @@
-// Q1: Create a list of names and print all names using list.
+//**************Assignment Number 2************** */
+
+//Q.1 Write a Dart program to check if a given number is positive, negative, or zero.
+
 // void main(){
-//   var names=['Ali','Hassan','Hussain','Sajjad','Baqir','Jafar'];
-     // print(names);
+//   var a=27;
+//   if(a > 0){
+//       print("The given number $a is a positive number..");
+//   }
+//   else if(a < 0){
+//       print("The given number $a is a Negative number..");
+
+//   }
+//   else if (a==0){
+//     print("The given number $a is a Zero number..");
+//   }
 // }
 
-// Q2:Create a list of Days and print only  Sunday
+//Q2:Write a Dart program to check if a given number is even or odd.
 // void main(){
-//   var days=['monday','tuesday','wednesday','thursday','friday','saturday','sunday'];
-//   print(days[6]);
+//   var a=61;
+//   if(a%2==0){
+//     print("The given number $a is even numner");
+//   }
+//   else if(a%2==1){
+//      print("The given number $a is odd numner");
+//   }
 // }
 
-//Q3: create a list  of name, class, roll no, grade, percentage. And print. 
+//Q3:  Write a Dart program to determine if a given year is a leap year or not,
+// considering leap years occur every 4 years except for years divisible by 100 unless
+//they are also divisible by 400.
 
-// void main(){
-//   var info=['Tasadduq','Second Year','126','A+',98];
-//   print("My name is: ${info[0]}");
-//   print("I am in class: ${info[1]}");
-//   print("My roll number is: ${info[2]}");
-//   print("My Grade is: ${info[3]}");
-//   print("My Percentage is: ${info[4]}%");
+// void main() {
+//   int year = 2024;
+//   if (year % 4 == 0) {
+//     print("The given Year is a leap year.......");
+//   } else if (year % 100 == 0) {
+//     print("The given Year is a leap year.......");
+//   } else if (year % 400 == 0) {
+//     print("The given Year is a leap year.......");
+//   }
+//   else{
+//     print("The given year is not a leap year....");
+//   }
 // }
 
-// Q4: Create a list of numbers & write a program to get the smallest & greatest number from a list.
+//Q4: Develop a Dart program to find the largest of three numbers.
+
 // void main(){
-//   var num=[3,2,4,5,1,9,7,6,8];
-// num.sort();
-// int smallest_numbers=num.first;
-// int largest_number=num.last;
-// print("The smallest value is: $smallest_numbers");
-// print("The largest value is: $largest_number");
+//   int a=5;
+//   int b=6;
+//   int c=7;
+//   int largest;
+//   if(a>b){
+//     largest=a;
+//   }
+//   else{
+//     largest=b;
+//   }
+//   if(c>largest){
+//     print("The largest value is $c");
+//   }
+// }
+
+//Q5: Write a Dart program to check if a given year is a century year
+
+// void main(){
+//   int year=1900;
+//   if(year%100==0){
+//     print("The year is a century year.");
+//   }
+//   else{
+//  print("The year is not a century year.");
+//   }
+// }
+
+//Q6: Write a Dart program to check if a given number is divisible by 5 and 11
+// void main(){
+//   int num=55;
+//   if(num&5==0 && num&11==0){
+//     print("The given number is divisible by 5 and 11... ");
+//   }
+//   else{
+//     print("The given number is divisible by 5 and 11... ");
+//   }
+//}
+
+//Q7: Write a Dart program to check if a given number is a multiple of 3 or 7.
+// void main(){
+//   int num=76;
+//   if(num%3==0 || num%7==0){
+//     print("$num is a multiple of 3 or 7.' ");
+//   }
+//   else{
+//     print("$num is not a multiple of 3 or 7.");
+//   }
 // } 
 
-//Q5: Given a list of integers, write a dart code that returns the maximum value from the list.
+//Q8:Take 4 integer variables for subject & create a program for Marksheet
+// that will print user total marks & percentage as well by using concatenation.
 // void main(){
-//   var num=[15, 8, 23, 42, 7, 31, 19, 4, 56, 11];
-//   num.sort();
-//   int max_num=num.last;
-//   print("The maximum number is: ${(max_num)}");
+// var sub1=89;
+// var sub2=78;
+// var sub3=66;
+// var sub4=76;
+// var obtainedMarks=sub1+sub2+sub3+sub4;
+// var totalMarks=400;
+// var percentage=(obtainedMarks/totalMarks)*100;
+// print("*****Mark Sheet Of Jawan Pakistan*****");
+// print("Marks of first subject is: $sub1");
+// print("Marks of second subject is: $sub2");
+// print("Marks of third subject is: $sub3");
+// print("Marks of fourth subject is: $sub4");
+// print("Obtained Marks: $obtainedMarks");
+// print("Total Marks: $totalMarks");
+// if(percentage>=90){
+//   print("Excellent work you got A+! Keep it up!");
 // }
-
-//Q6:Write a Dart code that takes in a list of strings and prints a new list with the elements in reverse order.
-// The original list should remain unchanged.
-// void main(){
-//   var fruits=['Mango','Banana','Apple','Orange','PineApple'];
-//   var rev_list=fruits.reversed.toList();
-//   print(rev_list);
+// else if(percentage>=80){
+//   print("Good performance you got A.");
 // }
-
-//Q7:     Implement a Dart code that uses the where() method to filter out negative numbers from a list of integers. The program should take in the original list as a parameter and 
-//print a new list containing only the positive numbers.
-
-// void main(){
-//   var num=[15, -8, 23, -42, 7, -31, 19, 4, -56, 11];
-//   var fil_num=num.where((element) => element > 0 ).toList();
-//   print(fil_num);
+// else if(percentage>=70){
+//   print("Average performance you got A. Try to improve!");
 // }
-
-// Q8:   remove all false values from below list by using removeWhere or retainWhere property.
-//List<String> usersEligibility = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
-
-void main() {
-  List<String> usersEligibility = ['John', 'Alice', 'eligible', 'Mike', 'Sarah', 'Tom'];
- usersEligibility.removeWhere((element) => element !='eligible');
-  print(usersEligibility);
-}
+// else if(percentage>=60){
+//   print("Passable performance. Work harder!")
+// }
+// else{
+//   print("Fail. You need to put in more effort.")
+// }
+// }
